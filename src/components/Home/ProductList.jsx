@@ -9,6 +9,7 @@ const products = [
     imageSrc:
       "https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     likes: 10,
+    price: 10,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const products = [
     imageSrc:
       "https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     likes: 5,
+    price: 10,
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const products = [
     imageSrc:
       "https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     likes: 8,
+    price: 10,
   },
   // {
   //   id: 4,

@@ -1,5 +1,5 @@
 import { motion as m } from "framer-motion";
-import { RiHeartFill, RiAddCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
@@ -9,25 +9,21 @@ const ProductCard = ({ product }) => {
       transition={{ duration: 0.3 }}
       className="bg-white rounded-lg shadow-lg p-4"
     >
-      <div className="flex items-center justify-center">
+      <Link to={`/product/${product.id}`} className="block group">
         <img
           src={product.imageSrc}
           alt={product.title}
-          className="rounded-md object-cover w-full aspect-square"
+          className="object-cover w-full rounded aspect-square"
         />
-      </div>
-      <h3 className="text-base font-semibold mt-2">{product.title}</h3>
-      <p className="text-sm text-gray-600">{product.description}</p>
-      <div className="flex justify-between items-center mt-4">
-        <div className="flex items-center space-x-2">
-          <RiHeartFill className="text-red-500" />
-          <span className="text-gray-600">{product.likes}</span>
+
+        <div className="mt-3">
+          <h3 className="font-medium text-gray-900 group-hover:underline  group-hover:underline-offset-4">
+            {product.title}
+          </h3>
+          <p className="mt-1 text-sm text-gray-500">{product.description}</p>
+          <p className="mt-1 text-sm text-gray-700">${product.price}</p>
         </div>
-        <button className="flex items-center text-blue-500">
-          <RiAddCircleFill className="mr-1" />
-          Add to Cart
-        </button>
-      </div>
+      </Link>
     </m.div>
   );
 };
