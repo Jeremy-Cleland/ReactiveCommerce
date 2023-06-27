@@ -2,6 +2,8 @@ import { motion as m } from "framer-motion";
 import { useState } from "react";
 import clsx from "clsx";
 import { NavLink } from "react-router-dom";
+import ColorModeToggle from "./ColorModeToggle";
+import useColorMode from "../../hooks/useColorMode.js";
 
 import {
   RiSearchLine,
@@ -13,13 +15,13 @@ import {
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-
+  const [colorMode, setColorMode] = useColorMode();
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
   return (
-    <header className="border-b border-gray-100">
+    <header className="border-b border-gray-100 bg-dark-100 dark:bg-dark-900">
       <m.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,7 +29,7 @@ const Navbar = () => {
         className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8"
       >
         <div className="flex items-center gap-4">
-          <button className="p-3 text-gray-700 md:hidden" onClick={toggleNav}>
+          <button className="p-3 text-dark-900 md:hidden" onClick={toggleNav}>
             {isNavOpen ? (
               <RiCloseCircleLine className="h-5 w-5" />
             ) : (
@@ -36,14 +38,14 @@ const Navbar = () => {
           </button>
 
           <NavLink to="/" className="flex">
-            <span className="text-xs font-bold uppercase tracking-wide text-gray-500">
+            <span className="text-xs font-ChillaxBold uppercase text-dark-900 dark:text-dark-50 tracking-wide">
               Reactive Commerce
             </span>
           </NavLink>
         </div>
 
         <div className="flex flex-1 items-center justify-end gap-8">
-          <nav className="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500">
+          <nav className="hidden lg:flex lg:gap-4 lg:text-xs font-ChillaxSemiBold lg:uppercase lg:tracking-wide text-dark-900  dark:text-dark-50">
             <NavLink
               to="/products"
               className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-violet-400"
@@ -71,7 +73,7 @@ const Navbar = () => {
                   to="/cart"
                   className="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-violet-400"
                 >
-                  <RiShoppingCartLine className="h-4 w-4 text-gray-700" />
+                  <RiShoppingCartLine className="h-4 w-4 text-dark-900 dark:text-dark-100" />
                   <span className="sr-only">Cart</span>
                 </NavLink>
               </span>
@@ -81,19 +83,25 @@ const Navbar = () => {
                   to="/account"
                   className="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-violet-400"
                 >
-                  <RiAccountCircleLine className="h-4 w-4 text-gray-700" />
+                  <RiAccountCircleLine className="h-4 w-4 text-dark-900 dark:text-dark-100" />
                   <span className="sr-only"> Account </span>
                 </NavLink>
               </span>
 
-              <span className="hidden sm:block">
+              <span className="hidden sm:block border-e border-e-gray-100">
                 <NavLink
                   to="/search"
                   className="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-violet-400"
                 >
-                  <RiSearchLine className="h-4 w-4 text-gray-700" />
+                  <RiSearchLine className="h-4 w-4 text-dark-900 dark:text-dark-100" />
                   <span className="sr-only"> Search </span>
                 </NavLink>
+              </span>
+              <span className="border-e border-e-gray-100">
+                <ColorModeToggle
+                  colorMode={colorMode}
+                  setColorMode={setColorMode}
+                />
               </span>
             </div>
           </div>

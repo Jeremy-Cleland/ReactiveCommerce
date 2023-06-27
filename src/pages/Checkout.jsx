@@ -1,4 +1,4 @@
 const Checkout = () => {
-  return <div>index</div>;
+  return <div>Checkout</div>;
 };
 export default Checkout;

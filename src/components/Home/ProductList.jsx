@@ -1,3 +1,4 @@
+import { motion as m } from "framer-motion";
 import ProductCard from "../resusable/ProductCard.jsx";
 
 const products = [
@@ -45,11 +46,20 @@ const products = [
 
 const ProductList = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 px-2">
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        ease: "easeIn",
+        duration: 1,
+        delay: 0.5,
+      }}
+      className="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2"
+    >
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
-    </div>
+    </m.div>
   );
 };
 
