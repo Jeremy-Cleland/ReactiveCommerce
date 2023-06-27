@@ -55,7 +55,6 @@ Follow these steps to set up and run ReactiveCommerce locally:
 
 ## Scripts
 
-
 - npm run dev: Start the development server.
 - npm run build: Build the production-ready version of the application.
 - npm run lint: Run the ESLint linter to check for code errors and warnings.
@@ -74,7 +73,7 @@ Follow these steps to set up and run ReactiveCommerce locally:
 
 - react-dom: React DOM provides the rendering capabilities for React components. It enables your application to render and interact with the browser's Document Object Model (DOM).
 
-- react-helmet: React Helmet enables dynamic manipulation of the document head, including meta tags, title, and other elements. It helps with search engine optimization (SEO) and social sharing of your application.
+- react-helmet: React Helmet enables dynamic manipulation of the document head, including meta tags, titles, and other elements. It helps with search engine optimization (SEO) and social sharing of your application.
 
 - react-hook-form: React Hook Form is a performant library for managing forms in React. It provides a flexible and efficient way to handle form validation, form state management, and form submission.
 
