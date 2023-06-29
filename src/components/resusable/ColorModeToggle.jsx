@@ -19,7 +19,7 @@ const ColorModeToggle = ({ colorMode, setColorMode }) => {
 
   return (
     <div
-      className="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-violet-400 dark:text-dark-100 text-dark-900"
+      className="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-violet-400 dark:text-dark-100 text-gray-600 "
       onClick={toggleColorMode}
       onKeyDown={handleKeyDown}
       aria-label="Toggle Color Mode"
