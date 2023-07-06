@@ -47,6 +47,12 @@ const Navbar = () => {
         <div className="flex flex-1 items-center justify-end gap-8">
           <nav className="hidden lg:flex lg:gap-4 lg:text-xs font-ChillaxMedium lg:uppercase lg:tracking-wide text-gray-600   dark:text-dark-200">
             <NavLink
+              to="/"
+              className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-violet-400"
+            >
+              Home
+            </NavLink>
+            <NavLink
               to="/products"
               className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-violet-400"
             >
@@ -116,6 +122,9 @@ const Navbar = () => {
       >
         <div className="flex flex-col">
           <ul className="space-y-10">
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
             <li>
               <NavLink to="/products">Products</NavLink>
             </li>
