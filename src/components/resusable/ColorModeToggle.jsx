@@ -14,7 +14,7 @@ const ColorModeToggle = ({ colorMode, setColorMode }) => {
         toggleColorMode();
       }
     },
-    [toggleColorMode]
+    [toggleColorMode],
   );
 
   return (

@@ -111,7 +111,7 @@ const Navbar = () => {
       <div
         className={clsx(
           "absolute mx-[5vw] my-[5vh] h-[80vh] w-[90vw] rounded-lg bg-gray-300 px-[22.5vw] py-10 text-center text-violet-500 font-bold text-2xl",
-          isNavOpen ? "" : "hidden"
+          isNavOpen ? "" : "hidden",
         )}
       >
         <div className="flex flex-col">

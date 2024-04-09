@@ -43,7 +43,7 @@ const TypewriterText = ({ text, tag = "p", speed = 40, delay = 0 }) => {
       className: "inline-block",
       style: startTyping ? undefined : { color: "transparent" },
     },
-    startTyping ? displayText : text
+    startTyping ? displayText : text,
   );
 };
 
